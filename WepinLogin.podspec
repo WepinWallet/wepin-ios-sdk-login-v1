@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'WepinLogin'
   s.version          = '0.0.1'
-  s.summary          = 'A short description of WepinLogin.'
+  s.summary          = 'Wepin iOS SDK Login Library'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -21,10 +21,10 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/WepinWallet/wepin-ios-sdk-login-v1'
+  s.homepage         = 'https://www.wepin.io'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'iotrust' => 'wepin.contact@iotrust.kr' }
+  s.author           = { 'wepin.dev' => 'wepin.dev@iotrust.kr' }
   s.source           = { :git => 'https://github.com/WepinWallet/wepin-ios-sdk-login-v1.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
