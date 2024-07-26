@@ -1,0 +1,5 @@
+ extern const unsigned char BCryptVersionString[];
+ extern const double BCryptVersionNumber;
+
+ const unsigned char BCryptVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:BCrypt  PROJECT:Pods-1" "\n";
+ const double BCryptVersionNumber __attribute__ ((used)) = (double)1.;

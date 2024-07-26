@@ -1,0 +1,36 @@
+PODS:
+  - AppAuth (1.7.5):
+    - AppAuth/Core (= 1.7.5)
+    - AppAuth/ExternalUserAgent (= 1.7.5)
+  - AppAuth/Core (1.7.5)
+  - AppAuth/ExternalUserAgent (1.7.5):
+    - AppAuth/Core
+  - BCrypt (1.0.0)
+  - secp256k1.swift (0.1.4)
+  - WepinLogin (0.0.1):
+    - AppAuth (~> 1.7.5)
+    - BCrypt (~> 1.0.0)
+    - secp256k1.swift (~> 0.1.0)
+
+DEPENDENCIES:
+  - WepinLogin (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - AppAuth
+    - BCrypt
+    - secp256k1.swift
+
+EXTERNAL SOURCES:
+  WepinLogin:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AppAuth: 501c04eda8a8d11f179dbe8637b7a91bb7e5d2fa
+  BCrypt: 712b656110e5020d319c547e4d8f3053ded82b2a
+  secp256k1.swift: a7e7a214f6db6ce5db32cc6b2b45e5c4dd633634
+  WepinLogin: 4a46435a1ed2af0048a26a6f8a438d5d59b392e0
+
+PODFILE CHECKSUM: 2dd81a9b00c3962550f6edeecc9edacf13246bff
+
+COCOAPODS: 1.12.0

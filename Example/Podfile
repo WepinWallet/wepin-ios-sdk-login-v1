@@ -1,0 +1,14 @@
+use_frameworks!
+
+platform :ios, '13.0'
+
+target 'WepinLogin_Example' do
+  pod 'WepinLogin', :path => '../'
+#  pod 'secp256k1.swift'
+  target 'WepinLogin_Tests' do
+    
+    inherit! :search_paths
+
+#    pod 'secp256k1.swift'
+  end
+end

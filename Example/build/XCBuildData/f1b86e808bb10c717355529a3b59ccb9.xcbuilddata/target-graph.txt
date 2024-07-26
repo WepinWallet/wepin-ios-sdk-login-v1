@@ -1,0 +1,17 @@
+Target dependency graph (7 targets)
+Target 'Pods-WepinLogin_Tests' in project 'Pods'
+➜ Explicit dependency on target 'Pods-WepinLogin_Example' in project 'Pods'
+Target 'Pods-WepinLogin_Example' in project 'Pods'
+➜ Explicit dependency on target 'AppAuth' in project 'Pods'
+➜ Explicit dependency on target 'BCrypt' in project 'Pods'
+➜ Explicit dependency on target 'WepinLogin' in project 'Pods'
+➜ Explicit dependency on target 'secp256k1.swift' in project 'Pods'
+Target 'WepinLogin' in project 'Pods'
+➜ Explicit dependency on target 'AppAuth' in project 'Pods'
+➜ Explicit dependency on target 'BCrypt' in project 'Pods'
+➜ Explicit dependency on target 'secp256k1.swift' in project 'Pods'
+Target 'secp256k1.swift' in project 'Pods' (no dependencies)
+Target 'BCrypt' in project 'Pods' (no dependencies)
+Target 'AppAuth' in project 'Pods'
+➜ Explicit dependency on target 'AppAuth-AppAuthCore_Privacy' in project 'Pods'
+Target 'AppAuth-AppAuthCore_Privacy' in project 'Pods' (no dependencies)

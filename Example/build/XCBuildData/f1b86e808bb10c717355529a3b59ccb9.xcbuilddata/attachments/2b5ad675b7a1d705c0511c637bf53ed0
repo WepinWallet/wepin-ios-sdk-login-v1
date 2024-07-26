@@ -1,0 +1,11 @@
+framework module WepinLogin {
+  umbrella header "WepinLogin-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module WepinLogin.Swift {
+  header "WepinLogin-Swift.h"
+  requires objc
+}
