@@ -245,7 +245,7 @@
 		0021BDC076893625E637F19ACA06E081 /* Pods-WepinLogin_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WepinLogin_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		009B4A5576A0C409ABC2E01855FEB28B /* secp256k1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = secp256k1.h; path = secp256k1/Classes/secp256k1/include/secp256k1.h; sourceTree = "<group>"; };
 		01414F0BE307037F56CCD677896D79E6 /* util.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = util.h; path = secp256k1/Classes/secp256k1/src/util.h; sourceTree = "<group>"; };
-		0177E34FB530C2C21F3CD56632F018F2 /* sha2.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = sha2.c; path = BCrypt/Classes/bcryptc/sha2.c; sourceTree = "<group>"; };
+		0177E34FB530C2C21F3CD56632F018F2 /* sha2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = sha2.c; path = BCrypt/Classes/bcryptc/sha2.c; sourceTree = "<group>"; };
 		01B835CE71C91913FF45AA43CE37C2F5 /* main_impl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = main_impl.h; path = secp256k1/Classes/secp256k1/src/modules/recovery/main_impl.h; sourceTree = "<group>"; };
 		022024B67836373F50ED271A4D33DB2D /* field_5x52_asm_impl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = field_5x52_asm_impl.h; path = secp256k1/Classes/secp256k1/src/field_5x52_asm_impl.h; sourceTree = "<group>"; };
 		06B0908BCFBC8183AA9B32F5DE7C6904 /* num_gmp_impl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = num_gmp_impl.h; path = secp256k1/Classes/secp256k1/src/num_gmp_impl.h; sourceTree = "<group>"; };
@@ -253,7 +253,7 @@
 		08B39A2970F5EC3DF73BEFEB02FA3ECF /* OIDTokenRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDTokenRequest.m; path = Sources/AppAuthCore/OIDTokenRequest.m; sourceTree = "<group>"; };
 		0997C83C9ACDCF6E498DEC6E7DB0A30A /* Pods-WepinLogin_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WepinLogin_Example.release.xcconfig"; sourceTree = "<group>"; };
 		09A2E1618E89402720F7028C994F3258 /* AppAuthConst.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppAuthConst.swift; path = WepinLogin/Classes/AppAuthConst.swift; sourceTree = "<group>"; };
-		09B1F9A0FBB4D97B73EC42DD10C3A345 /* timingsafe_bcmp.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = timingsafe_bcmp.c; path = BCrypt/Classes/bcryptc/timingsafe_bcmp.c; sourceTree = "<group>"; };
+		09B1F9A0FBB4D97B73EC42DD10C3A345 /* timingsafe_bcmp.c */ = {isa = PBXFileReference; includeInIndex = 1; name = timingsafe_bcmp.c; path = BCrypt/Classes/bcryptc/timingsafe_bcmp.c; sourceTree = "<group>"; };
 		0B82D522CB5D2D68DAEF99C48AD3C1E2 /* WepinNetworkType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WepinNetworkType.swift; path = WepinLogin/Classes/WepinNetworkType.swift; sourceTree = "<group>"; };
 		0B904C922D5C3D4556E97D85B829FA2F /* OIDURLQueryComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDURLQueryComponent.m; path = Sources/AppAuthCore/OIDURLQueryComponent.m; sourceTree = "<group>"; };
 		0CC4C763C28D85BEC45DED6971E31A76 /* Pods-WepinLogin_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-WepinLogin_Example"; path = Pods_WepinLogin_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -269,7 +269,7 @@
 		1C9271E16E685D87F8DACFB5511247C8 /* scalar_impl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = scalar_impl.h; path = secp256k1/Classes/secp256k1/src/scalar_impl.h; sourceTree = "<group>"; };
 		1D7F52E9440D6BFF0B1159CE55091460 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/SafariServices.framework; sourceTree = DEVELOPER_DIR; };
 		1E1DD0CAB7A891D0F1948255A464C3ED /* scalar_8x32_impl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = scalar_8x32_impl.h; path = secp256k1/Classes/secp256k1/src/scalar_8x32_impl.h; sourceTree = "<group>"; };
-		1F8FD1012D11F4D6498B48C5239E796D /* bcrypt.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = bcrypt.c; path = BCrypt/Classes/bcryptc/bcrypt.c; sourceTree = "<group>"; };
+		1F8FD1012D11F4D6498B48C5239E796D /* bcrypt.c */ = {isa = PBXFileReference; includeInIndex = 1; name = bcrypt.c; path = BCrypt/Classes/bcryptc/bcrypt.c; sourceTree = "<group>"; };
 		20CEA92DC7507B8A7665C92F7ACA08D2 /* eckey_impl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = eckey_impl.h; path = secp256k1/Classes/secp256k1/src/eckey_impl.h; sourceTree = "<group>"; };
 		22FE45B1686CBDE2744FD9043177330E /* OIDAuthState+IOS.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "OIDAuthState+IOS.m"; path = "Sources/AppAuth/iOS/OIDAuthState+IOS.m"; sourceTree = "<group>"; };
 		23B5FD8B91F1FABA7F3AB7935B7B885B /* eckey.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = eckey.h; path = secp256k1/Classes/secp256k1/src/eckey.h; sourceTree = "<group>"; };
@@ -283,7 +283,7 @@
 		2A97DE44CC1EFDB3AEFB0DD708ADDF62 /* sha2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = sha2.h; path = BCrypt/Classes/bcryptc/include/sha2.h; sourceTree = "<group>"; };
 		2AB72693156BCEAFF25E8073FFB9A7A6 /* FirebaseNetworkType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FirebaseNetworkType.swift; path = WepinLogin/Classes/FirebaseNetworkType.swift; sourceTree = "<group>"; };
 		33A1314E0948D4D3670DC58E4F076CBF /* OIDError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDError.m; path = Sources/AppAuthCore/OIDError.m; sourceTree = "<group>"; };
-		3998B3B05513630E2381092797DBE745 /* bcrypt_pbkdf.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = bcrypt_pbkdf.c; path = BCrypt/Classes/bcryptc/bcrypt_pbkdf.c; sourceTree = "<group>"; };
+		3998B3B05513630E2381092797DBE745 /* bcrypt_pbkdf.c */ = {isa = PBXFileReference; includeInIndex = 1; name = bcrypt_pbkdf.c; path = BCrypt/Classes/bcryptc/bcrypt_pbkdf.c; sourceTree = "<group>"; };
 		39FFB0F1794DC422907D0C227E823A44 /* WepinLogin-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WepinLogin-Info.plist"; sourceTree = "<group>"; };
 		3B3EAD37351F6B93D35F956570D3C74B /* Pods-WepinLogin_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WepinLogin_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		3DBA5B2902AF8C17FCFCF85BC290C07C /* AppAuth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AppAuth.release.xcconfig; sourceTree = "<group>"; };
@@ -293,19 +293,19 @@
 		3FFFD759F1BBF3F6A1956C69518B998F /* BCrypt-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BCrypt-Info.plist"; sourceTree = "<group>"; };
 		40317D7CBADE57969EA1A2D00EE38E6B /* WepinLogin-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WepinLogin-dummy.m"; sourceTree = "<group>"; };
 		408692CD5AAE2BBE2E4914BEE3EEC182 /* WepinNework.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WepinNework.swift; path = WepinLogin/Classes/WepinNework.swift; sourceTree = "<group>"; };
-		40CCE1281164DE769303759678296832 /* secp256k1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = secp256k1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40CCE1281164DE769303759678296832 /* secp256k1.swift */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = secp256k1.swift; path = secp256k1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40F71AB852BA91DA0BE09B3CC3C7E50D /* blf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = blf.h; path = BCrypt/Classes/bcryptc/include/blf.h; sourceTree = "<group>"; };
 		415E8318199AD0870C0514989829473E /* BCrypt-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BCrypt-umbrella.h"; sourceTree = "<group>"; };
 		4449DCCC22077C84E6141E8F2B291644 /* field.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = field.h; path = secp256k1/Classes/secp256k1/src/field.h; sourceTree = "<group>"; };
 		46F48B1EDFFDA0D2BA05BA768480750F /* basic-config.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "basic-config.h"; path = "secp256k1/Classes/secp256k1/src/basic-config.h"; sourceTree = "<group>"; };
 		47130DD5907531B459F6A55CC9AE7E45 /* OIDRegistrationRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDRegistrationRequest.h; path = Sources/AppAuthCore/OIDRegistrationRequest.h; sourceTree = "<group>"; };
-		4758106B8BFEA1D134AD661A44ABFD5D /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = Sources/AppAuthCore/Resources/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		4758106B8BFEA1D134AD661A44ABFD5D /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = Sources/AppAuthCore/Resources/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		47683AF65443E644948D606D5712BF35 /* OIDAuthorizationService+IOS.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "OIDAuthorizationService+IOS.m"; path = "Sources/AppAuth/iOS/OIDAuthorizationService+IOS.m"; sourceTree = "<group>"; };
 		4872B17F582DED930438DCC1D977200D /* Pods-WepinLogin_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WepinLogin_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		48DBC1182C8415D263FF3E4D6A690614 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		4B7801B84C0B4DBCD9E07E89845070DD /* OIDExternalUserAgentIOSCustomBrowser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDExternalUserAgentIOSCustomBrowser.m; path = Sources/AppAuth/iOS/OIDExternalUserAgentIOSCustomBrowser.m; sourceTree = "<group>"; };
 		4BEC5A083A1F2AC7BA5629868C390A10 /* main_impl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = main_impl.h; path = secp256k1/Classes/secp256k1/src/modules/ecdh/main_impl.h; sourceTree = "<group>"; };
-		4BF4697837DAE29054A52AE714B35143 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4BF4697837DAE29054A52AE714B35143 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		4D916F4CACE5D91957C8DD8555CDBBE1 /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = WepinLogin/Classes/Utils.swift; sourceTree = "<group>"; };
 		52870A59F0CEDC29F6D23559251B6842 /* Pods-WepinLogin_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WepinLogin_Tests-umbrella.h"; sourceTree = "<group>"; };
 		555BE2432FCEE0290463E771A8B49FC1 /* secp256k1_ec_mult_static_context.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = secp256k1_ec_mult_static_context.h; path = secp256k1/Classes/secp256k1_ec_mult_static_context.h; sourceTree = "<group>"; };
@@ -313,10 +313,10 @@
 		5619BD04C344C818A7E7040C161DDD1E /* OIDAuthorizationService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthorizationService.h; path = Sources/AppAuthCore/OIDAuthorizationService.h; sourceTree = "<group>"; };
 		5665E690907BBB283FD1D719D85A9DA4 /* WepinLoginProvider+regExp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "WepinLoginProvider+regExp.swift"; path = "WepinLogin/Classes/WepinLoginProvider+regExp.swift"; sourceTree = "<group>"; };
 		56D332040BF75DCEAC3CCFEAEB3D5140 /* StorageManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StorageManager.swift; path = WepinLogin/Classes/StorageManager.swift; sourceTree = "<group>"; };
-		5B4B5FFAE9E17D7A6C262A1F21117BA8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		5B4B5FFAE9E17D7A6C262A1F21117BA8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		5BCFA2A6D9F8F93C644C8BF7ABE486A0 /* OIDExternalUserAgent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDExternalUserAgent.h; path = Sources/AppAuthCore/OIDExternalUserAgent.h; sourceTree = "<group>"; };
 		5FAB0C8308B546E0C211DEEA246C0A08 /* secp256k1.swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "secp256k1.swift-umbrella.h"; sourceTree = "<group>"; };
-		61659B667964B1AB374C92A7A3A98C61 /* blf.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = blf.c; path = BCrypt/Classes/bcryptc/blf.c; sourceTree = "<group>"; };
+		61659B667964B1AB374C92A7A3A98C61 /* blf.c */ = {isa = PBXFileReference; includeInIndex = 1; name = blf.c; path = BCrypt/Classes/bcryptc/blf.c; sourceTree = "<group>"; };
 		61D012E9DC05995790C93197F0C0E428 /* OIDExternalUserAgentIOSCustomBrowser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDExternalUserAgentIOSCustomBrowser.h; path = Sources/AppAuth/iOS/OIDExternalUserAgentIOSCustomBrowser.h; sourceTree = "<group>"; };
 		64390F9538F609A0FF4D2530EFAE5AEC /* ecdsa_impl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ecdsa_impl.h; path = secp256k1/Classes/secp256k1/src/ecdsa_impl.h; sourceTree = "<group>"; };
 		645CABB8D5E6D2793920CB5F7CE8F44B /* ecmult_impl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ecmult_impl.h; path = secp256k1/Classes/secp256k1/src/ecmult_impl.h; sourceTree = "<group>"; };
@@ -347,7 +347,7 @@
 		81271E8C6299103E0D96FEA9261CA7A4 /* pycabcrypt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pycabcrypt.h; path = BCrypt/Classes/bcryptc/include/pycabcrypt.h; sourceTree = "<group>"; };
 		814E4F4B1742DC11619B8F700B3F0078 /* OIDURLSessionProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDURLSessionProvider.h; path = Sources/AppAuthCore/OIDURLSessionProvider.h; sourceTree = "<group>"; };
 		830305D539B9B7C1F65AA3CEC9FD93D4 /* OIDExternalUserAgentCatalyst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDExternalUserAgentCatalyst.h; path = Sources/AppAuth/iOS/OIDExternalUserAgentCatalyst.h; sourceTree = "<group>"; };
-		83FE31E79D38D84F51DC50C7A9ECAA1C /* secp256k1.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = secp256k1.c; path = secp256k1/Classes/secp256k1/src/secp256k1.c; sourceTree = "<group>"; };
+		83FE31E79D38D84F51DC50C7A9ECAA1C /* secp256k1.c */ = {isa = PBXFileReference; includeInIndex = 1; name = secp256k1.c; path = secp256k1/Classes/secp256k1/src/secp256k1.c; sourceTree = "<group>"; };
 		84F3256EA0CA0A6E6053893D69E38171 /* field_5x52_impl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = field_5x52_impl.h; path = secp256k1/Classes/secp256k1/src/field_5x52_impl.h; sourceTree = "<group>"; };
 		85D10A1A8D52E803C2518471E2479363 /* OIDScopeUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDScopeUtilities.h; path = Sources/AppAuthCore/OIDScopeUtilities.h; sourceTree = "<group>"; };
 		89B49BF69FAB1CE857712FFF50486DC0 /* WepinLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WepinLogin.debug.xcconfig; sourceTree = "<group>"; };
@@ -369,8 +369,8 @@
 		9B48ED762C07CC5ED2F07871C72BD6EF /* OIDAuthorizationService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDAuthorizationService.m; path = Sources/AppAuthCore/OIDAuthorizationService.m; sourceTree = "<group>"; };
 		9B67899E4AB135838B819700A33477B3 /* OIDRegistrationResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDRegistrationResponse.m; path = Sources/AppAuthCore/OIDRegistrationResponse.m; sourceTree = "<group>"; };
 		9C8E53FBD8DC94C24C373CC45C66D846 /* secp256k1.swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "secp256k1.swift-dummy.m"; sourceTree = "<group>"; };
-		9D4738098733F1135764C48A7172E742 /* WepinLogin.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = WepinLogin.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D4738098733F1135764C48A7172E742 /* WepinLogin.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = WepinLogin.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EE88FF0DA12F3E8E50707FE9BF9D820 /* OIDRegistrationRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDRegistrationRequest.m; path = Sources/AppAuthCore/OIDRegistrationRequest.m; sourceTree = "<group>"; };
 		A184708D440BD0021854F8D7876E7927 /* portable_endian.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = portable_endian.h; path = BCrypt/Classes/bcryptc/include/portable_endian.h; sourceTree = "<group>"; };
 		A208A875610C356A4CCB32216D9C7F4C /* WepinLogin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WepinLogin.swift; path = WepinLogin/Classes/WepinLogin.swift; sourceTree = "<group>"; };
@@ -382,13 +382,13 @@
 		A919B758AA0F3721424B0B693150907F /* OIDServiceDiscovery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDServiceDiscovery.m; path = Sources/AppAuthCore/OIDServiceDiscovery.m; sourceTree = "<group>"; };
 		ACCB89DD2DFD7CD37908AFFCC93D94DA /* ecmult_const_impl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ecmult_const_impl.h; path = secp256k1/Classes/secp256k1/src/ecmult_const_impl.h; sourceTree = "<group>"; };
 		AF2E0AB79485347DA33A45ABD897055B /* OIDScopeUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDScopeUtilities.m; path = Sources/AppAuthCore/OIDScopeUtilities.m; sourceTree = "<group>"; };
-		B1B9BC2E220B7C7B79F383E6CE28179E /* lax_der_parsing.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = lax_der_parsing.c; path = secp256k1/Classes/secp256k1/contrib/lax_der_parsing.c; sourceTree = "<group>"; };
+		B1B9BC2E220B7C7B79F383E6CE28179E /* lax_der_parsing.c */ = {isa = PBXFileReference; includeInIndex = 1; name = lax_der_parsing.c; path = secp256k1/Classes/secp256k1/contrib/lax_der_parsing.c; sourceTree = "<group>"; };
 		B3490D801EF259714189F051A957574A /* OIDAuthorizationRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthorizationRequest.h; path = Sources/AppAuthCore/OIDAuthorizationRequest.h; sourceTree = "<group>"; };
 		B3699D05019D06EBE09249E2BCF92D23 /* secp256k1.swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = secp256k1.swift.debug.xcconfig; sourceTree = "<group>"; };
 		B5547FD56C33129EDDC1A86E91966073 /* OIDResponseTypes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDResponseTypes.m; path = Sources/AppAuthCore/OIDResponseTypes.m; sourceTree = "<group>"; };
 		B7AC7F1C3D5B70C0EE586545ACAB978B /* ecmult_gen.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ecmult_gen.h; path = secp256k1/Classes/secp256k1/src/ecmult_gen.h; sourceTree = "<group>"; };
 		B8D6D2C781AC1F96F1BCF68179AB6722 /* BCrypt.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BCrypt.modulemap; sourceTree = "<group>"; };
-		BA24B5A70968FB6317A21DC0E95E88AF /* lax_der_privatekey_parsing.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = lax_der_privatekey_parsing.c; path = secp256k1/Classes/secp256k1/contrib/lax_der_privatekey_parsing.c; sourceTree = "<group>"; };
+		BA24B5A70968FB6317A21DC0E95E88AF /* lax_der_privatekey_parsing.c */ = {isa = PBXFileReference; includeInIndex = 1; name = lax_der_privatekey_parsing.c; path = secp256k1/Classes/secp256k1/contrib/lax_der_privatekey_parsing.c; sourceTree = "<group>"; };
 		BA32B92A10632D7E19C8EC5ABE183EE1 /* OIDExternalUserAgentIOS.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDExternalUserAgentIOS.m; path = Sources/AppAuth/iOS/OIDExternalUserAgentIOS.m; sourceTree = "<group>"; };
 		BB18E7738C6A31C1E6DF6042A511849B /* OIDFieldMapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDFieldMapping.h; path = Sources/AppAuthCore/OIDFieldMapping.h; sourceTree = "<group>"; };
 		BD02947C4556EFACDEC341CA73828684 /* hash_impl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = hash_impl.h; path = secp256k1/Classes/secp256k1/src/hash_impl.h; sourceTree = "<group>"; };
@@ -621,6 +621,7 @@
 				09B1F9A0FBB4D97B73EC42DD10C3A345 /* timingsafe_bcmp.c */,
 				F5BAF8A92FCAC11713770583FF41D50E /* Support Files */,
 			);
+			name = BCrypt;
 			path = BCrypt;
 			sourceTree = "<group>";
 		};
@@ -717,6 +718,7 @@
 				01414F0BE307037F56CCD677896D79E6 /* util.h */,
 				5FC517540920CDAD7AD11B34BFA85532 /* Support Files */,
 			);
+			name = secp256k1.swift;
 			path = secp256k1.swift;
 			sourceTree = "<group>";
 		};
@@ -784,7 +786,7 @@
 				BD63D935BB3EBEA73856BBE74E8D5459 /* BCrypt */,
 				0CC4C763C28D85BEC45DED6971E31A76 /* Pods-WepinLogin_Example */,
 				A4D27B3D14501F68578F8826249580D7 /* Pods-WepinLogin_Tests */,
-				40CCE1281164DE769303759678296832 /* secp256k1.framework */,
+				40CCE1281164DE769303759678296832 /* secp256k1.swift */,
 				1C5AF43D3BE3C59A5C287E9155A5F269 /* WepinLogin */,
 			);
 			name = Products;
@@ -866,6 +868,7 @@
 				4D208233F76CE8551AB423ED4A1F0786 /* ExternalUserAgent */,
 				9D7BAA247BDE3B1579BC89BD2C43A412 /* Support Files */,
 			);
+			name = AppAuth;
 			path = AppAuth;
 			sourceTree = "<group>";
 		};
@@ -1078,7 +1081,7 @@
 			);
 			name = secp256k1.swift;
 			productName = secp256k1;
-			productReference = 40CCE1281164DE769303759678296832 /* secp256k1.framework */;
+			productReference = 40CCE1281164DE769303759678296832 /* secp256k1.swift */;
 			productType = "com.apple.product-type.framework";
 		};
 		5C642AA10FB29936669CC269F42079C6 /* AppAuth */ = {
@@ -1167,8 +1170,8 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1300;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 12.0";
@@ -1581,7 +1584,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/BCrypt/BCrypt-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/BCrypt/BCrypt-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1645,7 +1648,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/AppAuth";
 				IBSC_MODULE = AppAuth;
 				INFOPLIST_FILE = "Target Support Files/AppAuth/ResourceBundle-AppAuthCore_Privacy-AppAuth-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				PRODUCT_NAME = AppAuthCore_Privacy;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1668,7 +1671,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/AppAuth/AppAuth-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/AppAuth/AppAuth-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1769,7 +1772,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/BCrypt/BCrypt-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/BCrypt/BCrypt-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1865,7 +1868,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/AppAuth/AppAuth-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/AppAuth/AppAuth-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2000,7 +2003,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/AppAuth";
 				IBSC_MODULE = AppAuth;
 				INFOPLIST_FILE = "Target Support Files/AppAuth/ResourceBundle-AppAuthCore_Privacy-AppAuth-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				PRODUCT_NAME = AppAuthCore_Privacy;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
