@@ -75,7 +75,7 @@ class StorageManager {
         // 변환할 수 없는 경우 nil 반환
         return nil
     }
-    func setStorage(key: String, data: Codable & Any) {
+    func setStorage<T: Codable&Any>(key: String, data: T) {
         
         
         let keychainData = convertToData(value: data) //.encodeToJSON(data)//.encodeToJSON(data)
@@ -223,18 +223,18 @@ class StorageManager {
 //        return result
 //    }
      
-    func setAllStorage(jsonstring: String) {
-        let jsonData = jsonstring.data(using: .utf8)!
-        if let dictionary = decodeJSONToDictionary(jsonData: jsonData) {
-            setAllStorage(data: dictionary)
-        }
-    }
-    
-    func setAllStorage(data: [String: Codable]) {
-        for (key, value) in data {
-            setStorage(key: key, data: value)
-        }
-    }
+//    func setAllStorage(jsonstring: String) {
+//        let jsonData = jsonstring.data(using: .utf8)!
+//        if let dictionary = decodeJSONToDictionary(jsonData: jsonData) {
+//            setAllStorage(data: dictionary)
+//        }
+//    }
+//
+//    func setAllStorage(data: [String: Codable]) {
+//        for (key, value) in data {
+//            setStorage(key: key, data: value)
+//        }
+//    }
     
     func deleteAllStorageWithCurrentAppId() {
         let query: [String: Any] = [

@@ -1,5 +1,0 @@
- extern const unsigned char WepinLoginVersionString[];
- extern const double WepinLoginVersionNumber;
-
- const unsigned char WepinLoginVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:WepinLogin  PROJECT:Pods-1" "\n";
- const double WepinLoginVersionNumber __attribute__ ((used)) = (double)1.;

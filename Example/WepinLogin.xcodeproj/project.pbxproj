@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		401C6A05E55650E150753439 /* Pods_WepinLogin_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF672050FEB67BB5C0F5827 /* Pods_WepinLogin_Example.framework */; };
+		3731DA4364260EB386F27D89 /* Pods_WepinLogin_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7C6740A087C12EB750D62F2 /* Pods_WepinLogin_Tests.framework */; };
+		486F9AC697498F5B68340458 /* Pods_WepinLogin_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3720FFCC81644644E2378F03 /* Pods_WepinLogin_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -15,7 +16,6 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		ECCE2E8C2C212D79009F3625 /* TestListCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCE2E8B2C212D79009F3625 /* TestListCellTableViewCell.swift */; };
-		FD2C4E139254549CD69D20EF /* Pods_WepinLogin_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E3F120CF5BB8FEF3E0760D /* Pods_WepinLogin_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,12 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00B0B1FC1EC96CA35D1CC350 /* Pods-WepinLogin_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WepinLogin_Example.debug.xcconfig"; path = "Target Support Files/Pods-WepinLogin_Example/Pods-WepinLogin_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		0B055BCAA327D89ED799A3AE /* Pods-WepinLogin_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WepinLogin_Tests.release.xcconfig"; path = "Target Support Files/Pods-WepinLogin_Tests/Pods-WepinLogin_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		23E537529E1BCF6231B60FE3 /* Pods-WepinLogin_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WepinLogin_Tests.debug.xcconfig"; path = "Target Support Files/Pods-WepinLogin_Tests/Pods-WepinLogin_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		36E3F120CF5BB8FEF3E0760D /* Pods_WepinLogin_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WepinLogin_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		075EAE4137B318A40CE7CB34 /* Pods-WepinLogin_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WepinLogin_Tests.release.xcconfig"; path = "Target Support Files/Pods-WepinLogin_Tests/Pods-WepinLogin_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		2EBD3952B41FDDA2EEFA89D0 /* Pods-WepinLogin_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WepinLogin_Tests.debug.xcconfig"; path = "Target Support Files/Pods-WepinLogin_Tests/Pods-WepinLogin_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		3720FFCC81644644E2378F03 /* Pods_WepinLogin_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WepinLogin_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		498A63DBDEB9FB539ABF4C9F /* WepinLogin.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WepinLogin.podspec; path = ../WepinLogin.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		4BF672050FEB67BB5C0F5827 /* Pods_WepinLogin_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WepinLogin_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* WepinLogin_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WepinLogin_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,8 +44,10 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		8CDE4074365B95DE829D1689 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		8F535B42D3953F9C3B5854EB /* Pods-WepinLogin_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WepinLogin_Example.release.xcconfig"; path = "Target Support Files/Pods-WepinLogin_Example/Pods-WepinLogin_Example.release.xcconfig"; sourceTree = "<group>"; };
 		9BBFBC3C96EE3D12DED0E3ED /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		A2B0F75388441EC64558CD93 /* Pods-WepinLogin_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WepinLogin_Example.debug.xcconfig"; path = "Target Support Files/Pods-WepinLogin_Example/Pods-WepinLogin_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		B36CEB3BEF84E209FC2BB7DD /* Pods-WepinLogin_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WepinLogin_Example.release.xcconfig"; path = "Target Support Files/Pods-WepinLogin_Example/Pods-WepinLogin_Example.release.xcconfig"; sourceTree = "<group>"; };
+		B7C6740A087C12EB750D62F2 /* Pods_WepinLogin_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WepinLogin_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECCE2E8B2C212D79009F3625 /* TestListCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestListCellTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,7 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				401C6A05E55650E150753439 /* Pods_WepinLogin_Example.framework in Frameworks */,
+				486F9AC697498F5B68340458 /* Pods_WepinLogin_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,13 +64,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD2C4E139254549CD69D20EF /* Pods_WepinLogin_Tests.framework in Frameworks */,
+				3731DA4364260EB386F27D89 /* Pods_WepinLogin_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3637E5FE1876E937C484FFD7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3720FFCC81644644E2378F03 /* Pods_WepinLogin_Example.framework */,
+				B7C6740A087C12EB750D62F2 /* Pods_WepinLogin_Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -79,7 +88,7 @@
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				65A8642C8821C241701DCC92 /* Pods */,
-				F8C2292631BB46552F5A159C /* Frameworks */,
+				3637E5FE1876E937C484FFD7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,21 +154,12 @@
 		65A8642C8821C241701DCC92 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				00B0B1FC1EC96CA35D1CC350 /* Pods-WepinLogin_Example.debug.xcconfig */,
-				8F535B42D3953F9C3B5854EB /* Pods-WepinLogin_Example.release.xcconfig */,
-				23E537529E1BCF6231B60FE3 /* Pods-WepinLogin_Tests.debug.xcconfig */,
-				0B055BCAA327D89ED799A3AE /* Pods-WepinLogin_Tests.release.xcconfig */,
+				A2B0F75388441EC64558CD93 /* Pods-WepinLogin_Example.debug.xcconfig */,
+				B36CEB3BEF84E209FC2BB7DD /* Pods-WepinLogin_Example.release.xcconfig */,
+				2EBD3952B41FDDA2EEFA89D0 /* Pods-WepinLogin_Tests.debug.xcconfig */,
+				075EAE4137B318A40CE7CB34 /* Pods-WepinLogin_Tests.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		F8C2292631BB46552F5A159C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				4BF672050FEB67BB5C0F5827 /* Pods_WepinLogin_Example.framework */,
-				36E3F120CF5BB8FEF3E0760D /* Pods_WepinLogin_Tests.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,11 +169,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "WepinLogin_Example" */;
 			buildPhases = (
-				AA89842CCE94FAB26D8F89C1 /* [CP] Check Pods Manifest.lock */,
+				A2F7E56900C9EE45201E177E /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				DC9003F6478CFA5A6FC66836 /* [CP] Embed Pods Frameworks */,
+				F13CE015BA2530899E57A56C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -188,7 +188,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "WepinLogin_Tests" */;
 			buildPhases = (
-				F52643D4059A92F1AC9C372B /* [CP] Check Pods Manifest.lock */,
+				9843AE606FA112A029B11F99 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
@@ -266,7 +266,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		AA89842CCE94FAB26D8F89C1 /* [CP] Check Pods Manifest.lock */ = {
+		9843AE606FA112A029B11F99 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WepinLogin_Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2F7E56900C9EE45201E177E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -288,7 +310,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DC9003F6478CFA5A6FC66836 /* [CP] Embed Pods Frameworks */ = {
+		F13CE015BA2530899E57A56C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -310,28 +332,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WepinLogin_Example/Pods-WepinLogin_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F52643D4059A92F1AC9C372B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WepinLogin_Tests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -497,13 +497,13 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 00B0B1FC1EC96CA35D1CC350 /* Pods-WepinLogin_Example.debug.xcconfig */;
+			baseConfigurationReference = A2B0F75388441EC64558CD93 /* Pods-WepinLogin_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B6626Z492H;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = WepinLogin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -522,13 +522,13 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8F535B42D3953F9C3B5854EB /* Pods-WepinLogin_Example.release.xcconfig */;
+			baseConfigurationReference = B36CEB3BEF84E209FC2BB7DD /* Pods-WepinLogin_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B6626Z492H;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = WepinLogin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -547,11 +547,11 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 23E537529E1BCF6231B60FE3 /* Pods-WepinLogin_Tests.debug.xcconfig */;
+			baseConfigurationReference = 2EBD3952B41FDDA2EEFA89D0 /* Pods-WepinLogin_Tests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B6626Z492H;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -578,11 +578,11 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B055BCAA327D89ED799A3AE /* Pods-WepinLogin_Tests.release.xcconfig */;
+			baseConfigurationReference = 075EAE4137B318A40CE7CB34 /* Pods-WepinLogin_Tests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B6626Z492H;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
