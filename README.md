@@ -95,7 +95,7 @@ wepin = WepinLogin(initParam)
 
 ### isInitialized
 ```swift
-wepin!.isInitialized()
+let result = wepin!.isInitialized()
 ```
 The `isInitialized()` method checks Wepin Login Library is initialized.
 
