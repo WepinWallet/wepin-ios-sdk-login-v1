@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WepinLogin'
-  s.version          = '0.0.2'
+  s.version          = '0.0.3'
   s.summary          = 'Wepin iOS SDK Login Library'
 
 # This description is used to generate tags and improve search results.
@@ -33,11 +33,6 @@ Pod::Spec.new do |s|
   # }
 
   s.swift_version = '5.0'
-  
-  s.prepare_command = <<-CMD
-      echo "public let PodVersion = \\"#{s.version}\\"" > WepinLogin/Classes/Version.swift
-    CMD
-  
   s.dependency 'secp256k1.swift' , '~> 0.1.0'
   s.dependency 'AppAuth' , '~> 1.7.5'
   s.dependency 'BCrypt' , '~> 1.0.0'
