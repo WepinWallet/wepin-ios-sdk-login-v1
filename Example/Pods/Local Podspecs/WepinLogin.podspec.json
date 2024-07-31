@@ -1,6 +1,6 @@
 {
   "name": "WepinLogin",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "summary": "Wepin iOS SDK Login Library",
   "homepage": "https://github.com/WepinWallet/wepin-ios-sdk-login-v1",
   "license": {
@@ -12,14 +12,13 @@
   },
   "source": {
     "git": "https://github.com/WepinWallet/wepin-ios-sdk-login-v1.git",
-    "tag": "0.0.2"
+    "tag": "0.0.3"
   },
   "platforms": {
     "ios": "13.0"
   },
   "source_files": "WepinLogin/Classes/**/*",
   "swift_versions": "5.0",
-  "prepare_command": "echo \"public let PodVersion = \\\"0.0.2\\\"\" > WepinLogin/Classes/Version.swift",
   "dependencies": {
     "secp256k1.swift": [
       "~> 0.1.0"
