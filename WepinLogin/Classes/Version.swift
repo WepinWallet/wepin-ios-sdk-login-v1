@@ -1,1 +1,1 @@
-public let PodVersion = "0.0.1"
+public let PodVersion = "0.0.2"
