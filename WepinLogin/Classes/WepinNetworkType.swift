@@ -287,7 +287,7 @@ public struct WepinUserStatus {
 }
 
 public enum WepinLoginStatus: String {
-    case complete = "completed"
+    case complete = "complete"
     case pinRequired = "pinRequired"
     case registerRequired = "registerRequired"
     
