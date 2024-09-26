@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WepinLogin'
-  s.version          = '0.0.3'
+  s.version          = '0.0.4'
   s.summary          = 'Wepin iOS SDK Login Library'
 
 # This description is used to generate tags and improve search results.
