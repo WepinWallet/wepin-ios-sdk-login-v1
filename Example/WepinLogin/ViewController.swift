@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     let appKey: String = "Wepin-App-Key"
     let appId: String = "Wepin-App-ID"
-    let privateKey: String = "Wepin-OAuth-Verification-Key"
+    let privateKey: String? = "Wepin-OAuth-Verification-Key"
     
     let googleClientId: String = "Google-Client-ID"
     let appleClientId: String = "Apple-Client-ID"
