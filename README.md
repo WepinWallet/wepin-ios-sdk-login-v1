@@ -31,6 +31,19 @@ After signing up for [Wepin Workspace](https://workspace.wepin.io/), go to the d
 
 ## ⏩ Installation
 
+> ⚠️ Important Notice for v1.0.0 Update
+>
+> 🚨 Breaking Changes & Migration Guide 🚨
+>
+> This update includes major changes that may impact your app. Please read the following carefully before updating.
+>
+> 🔄 Storage Migration
+> •    In rare cases, stored data may become inaccessible due to key changes.
+> •    Starting from v1.0.0, if the key is invalid, stored data will be cleared, and a new key will be generated automatically.
+> •    Existing data will remain accessible unless a key issue is detected, in which case a reset will occur.
+> •    ⚠️ Downgrading to an older version after updating to v1.0.0 may prevent access to previously stored data.
+> •    Recommended: Backup your data before updating to avoid any potential issues.
+
 WepinLogin is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
@@ -221,7 +234,15 @@ This function logs in to the Wepin Firebase using an external ID token. It retur
 #### Parameters
 - `params` \<WepinLoginOauthIdTokenRequest> 
   - `idToken` \<String> - ID token value to be used for login
-  - `sign` \<String> - Signature value for the token provided as the first parameter.(Returned value of [getSignForLogin()](#GetSignForLogin))
+  - `sign` \<String?> - __optional__ Signature value for the token provided as the first parameter.(Returned value of [getSignForLogin()](#GetSignForLogin))
+  
+> [!NOTE]
+> Starting from WepinLogin version 1.0.0, the sign value is optional.
+>
+> If you choose to remove the authentication key issued from the [Wepin Workspace](https://workspace.wepin.io/), you may opt not to use the `sign` value. 
+>
+> (Wepin Workspace > Development Tools menu > Login tab > Auth Key > Delete)
+> > The Auth Key menu is visible only if an authentication key was previously generated.
 
 #### Returns
 - \<WepinLoginResult>
@@ -258,7 +279,15 @@ This function logs in to the Wepin Firebase using an external access token. It r
 - `params` \<WepinLoginOauthAccessTokenRequest> 
   - `provider` \<"naver"|"discord"> - Provider that issued the access token
   - `accessToken` \<String> - Access token value to be used for login 
-  - `sign` \<String> - Signature value for the token provided as the first parameter. (Returned value of [getSignForLogin()](#GetSignForLogin))
+  - `sign` \<String?> - __optional__ Signature value for the token provided as the first parameter. (Returned value of [getSignForLogin()](#GetSignForLogin))
+
+> [!NOTE]
+> Starting from WepinLogin version 1.0.0, the sign value is optional.
+>
+> If you choose to remove the authentication key issued from the [Wepin Workspace](https://workspace.wepin.io/), you may opt not to use the `sign` value. 
+>
+> (Wepin Workspace > Development Tools menu > Login tab > Auth Key > Delete)
+> > The Auth Key menu is visible only if an authentication key was previously generated.
 
 #### Returns
 - \<WepinLoginResult>

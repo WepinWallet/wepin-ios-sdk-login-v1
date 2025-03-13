@@ -90,12 +90,17 @@ class ViewController: UIViewController {
         case "getSignForLogin":
             do {
                 print("getSingForLogin")
-                let res = wepin!.getSignForLogin(privateKey: privateKey, message: "")
-                if (res != nil) {
-                    self.tvResult.text = String("Successed: " + res!)
-                }else {
-                    self.tvResult.text = String("Fail")
+                if let privateKey = privateKey {
+                    let res = wepin!.getSignForLogin(privateKey: privateKey, message: "")
+                    if (res != nil) {
+                        self.tvResult.text = String("Successed: " + res!)
+                    }else {
+                        self.tvResult.text = String("Fail")
+                    }
+                } else {
+                    self.tvResult.text = String("Fail - privateKey is nil")
                 }
+                
             }
         case "loginWithOauth(Apple)":
             do {
@@ -104,8 +109,16 @@ class ViewController: UIViewController {
                     do {
                         let oauthParams = WepinLoginOauth2Params(provider: "apple", clientId: self.appleClientId)
                         let res = try await wepin!.loginWithOauthProvider(params: oauthParams, viewController: self)
-                        let sign = wepin!.getSignForLogin(privateKey: privateKey, message: res.token)
-                        let params = WepinLoginOauthIdTokenRequest(idToken: res.token, sign: sign!)
+                        var params: WepinLoginOauthIdTokenRequest
+                        if let privateKey = privateKey {
+                            if let sign = wepin?.getSignForLogin(privateKey: privateKey, message: res.token) {
+                                params = WepinLoginOauthIdTokenRequest(idToken: res.token, sign: sign)
+                            } else {
+                                params = WepinLoginOauthIdTokenRequest(idToken: res.token)
+                            }
+                        } else {
+                            params = WepinLoginOauthIdTokenRequest(idToken: res.token)
+                        }
                         wepinLoginRes = try await wepin!.loginWithIdToken(params: params)
                         self.tvResult.text = String("Successed: \(wepinLoginRes)")
                     } catch (let error){
@@ -120,8 +133,17 @@ class ViewController: UIViewController {
                     do {
                         let oauthParams = WepinLoginOauth2Params(provider: "google", clientId: self.googleClientId)
                         let res = try await wepin!.loginWithOauthProvider(params: oauthParams, viewController: self)
-                        let sign = wepin!.getSignForLogin(privateKey: privateKey, message: res.token)
-                        let params = WepinLoginOauthIdTokenRequest(idToken: res.token, sign: sign!)
+                        var params: WepinLoginOauthIdTokenRequest
+                        if let privateKey = privateKey {
+                            if let sign = wepin?.getSignForLogin(privateKey: privateKey, message: res.token) {
+                                params = WepinLoginOauthIdTokenRequest(idToken: res.token, sign: sign)
+                            } else {
+                                params = WepinLoginOauthIdTokenRequest(idToken: res.token)
+                            }
+                        } else {
+                            params = WepinLoginOauthIdTokenRequest(idToken: res.token)
+                        }
+                        
                         wepinLoginRes = try await wepin!.loginWithIdToken(params: params)
                         self.tvResult.text = String("Successed: \(wepinLoginRes)")
                     } catch (let error){
@@ -136,8 +158,18 @@ class ViewController: UIViewController {
                     do {
                         let oauthParams = WepinLoginOauth2Params(provider: "discord", clientId: self.discordClientId)
                         let res = try await wepin!.loginWithOauthProvider(params: oauthParams, viewController: self)
-                        let sign = wepin!.getSignForLogin(privateKey: privateKey, message: res.token)
-                        let params = WepinLoginOauthAccessTokenRequest(provider: "discord", accessToken: res.token, sign: sign!)
+                        
+                        var params: WepinLoginOauthAccessTokenRequest
+                        if let privateKey = privateKey {
+                            if let sign = wepin?.getSignForLogin(privateKey: privateKey, message: res.token) {
+                                params = WepinLoginOauthAccessTokenRequest(provider: "discord", accessToken: res.token, sign: sign)
+                            } else {
+                                params = WepinLoginOauthAccessTokenRequest(provider: "discord", accessToken: res.token)
+                            }
+                        } else {
+                            params = WepinLoginOauthAccessTokenRequest(provider: "discord", accessToken: res.token)
+                        }
+                        
                         wepinLoginRes = try await wepin!.loginWithAccessToken(params: params)
                         self.tvResult.text = String("Successed: \(wepinLoginRes)")
                     } catch (let error){
@@ -152,8 +184,18 @@ class ViewController: UIViewController {
                     do {
                         let oauthParams = WepinLoginOauth2Params(provider: "naver", clientId: self.naverClientId)
                         let res = try await wepin!.loginWithOauthProvider(params: oauthParams, viewController: self)
-                        let sign = wepin!.getSignForLogin(privateKey: privateKey, message: res.token)
-                        let params = WepinLoginOauthAccessTokenRequest(provider: "naver", accessToken: res.token, sign: sign!)
+                        
+                        var params: WepinLoginOauthAccessTokenRequest
+                        if let privateKey = privateKey {
+                            if let sign = wepin?.getSignForLogin(privateKey: privateKey, message: res.token) {
+                                params = WepinLoginOauthAccessTokenRequest(provider: "naver", accessToken: res.token, sign: sign)
+                            } else {
+                                params = WepinLoginOauthAccessTokenRequest(provider: "naver", accessToken: res.token)
+                            }
+                        } else {
+                            params = WepinLoginOauthAccessTokenRequest(provider: "naver", accessToken: res.token)
+                        }
+                        
                         wepinLoginRes = try await wepin!.loginWithAccessToken(params: params)
                         self.tvResult.text = String("Successed: \(wepinLoginRes)")
                     } catch (let error){
@@ -167,8 +209,18 @@ class ViewController: UIViewController {
                 Task {
                     do {
                         let token = "ID-TOKEN"
-                        let sign = wepin!.getSignForLogin(privateKey: privateKey, message: token)
-                        let params = WepinLoginOauthIdTokenRequest(idToken: token, sign: sign!)
+                        
+                        var params: WepinLoginOauthIdTokenRequest
+                        if let privateKey = privateKey {
+                            if let sign = wepin?.getSignForLogin(privateKey: privateKey, message: token) {
+                                params = WepinLoginOauthIdTokenRequest(idToken: token, sign: sign)
+                            } else {
+                                params = WepinLoginOauthIdTokenRequest(idToken: token)
+                            }
+                        } else {
+                            params = WepinLoginOauthIdTokenRequest(idToken: token)
+                        }
+                        
                         wepinLoginRes = try await wepin!.loginWithIdToken(params: params)
                         
                         self.tvResult.text = String("Successed: \(wepinLoginRes)")
@@ -183,8 +235,18 @@ class ViewController: UIViewController {
                 Task {
                     do {
                         let token = "ACCESS-TOKEN"
-                        let sign = wepin!.getSignForLogin(privateKey: privateKey, message: token)
-                        let params = WepinLoginOauthAccessTokenRequest(provider: "discord", accessToken: token, sign: sign!)
+                        
+                        var params: WepinLoginOauthAccessTokenRequest
+                        if let privateKey = privateKey {
+                            if let sign = wepin?.getSignForLogin(privateKey: privateKey, message: token) {
+                                params = WepinLoginOauthAccessTokenRequest(provider: "discord", accessToken: token, sign: sign)
+                            } else {
+                                params = WepinLoginOauthAccessTokenRequest(provider: "discord", accessToken: token)
+                            }
+                        } else {
+                            params = WepinLoginOauthAccessTokenRequest(provider: "discord", accessToken: token)
+                        }
+                        
                         wepinLoginRes = try await wepin!.loginWithAccessToken(params: params)
                         self.tvResult.text = String("Successed: \(wepinLoginRes)")
                     } catch (let error){

@@ -171,8 +171,8 @@ struct WepinCheckEmailExistResponse: Codable {
 public struct WepinLoginOauthAccessTokenRequest: Codable {
     let provider: String
     let accessToken: String
-    let sign: String
-    public init(provider: String, accessToken: String, sign: String) {
+    let sign: String?
+    public init(provider: String, accessToken: String, sign: String? = nil) {
         self.provider = provider
         self.accessToken = accessToken
         self.sign = sign
@@ -182,8 +182,8 @@ public struct WepinLoginOauthAccessTokenRequest: Codable {
 // LoginOauthIdTokenRequest 구조체
 public struct WepinLoginOauthIdTokenRequest: Codable {
     var idToken: String
-    var sign: String
-    public init(idToken: String, sign: String) {
+    var sign: String?
+    public init(idToken: String, sign: String? = nil) {
         self.idToken = idToken
         self.sign = sign
     }

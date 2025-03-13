@@ -54,6 +54,7 @@ public class WepinLogin {
     
     var safariVC: SFSafariViewController? = nil
     public static var WepinAuthorizationFlow: OIDExternalUserAgentSession?
+    private var authSession: ASWebAuthenticationSession?
     ///
     /// public APIs ====================================================================
     ///
@@ -76,7 +77,6 @@ public class WepinLogin {
             let appInfo = try await wepinNetwork?.getAppInfo()
             let fireconfig = try await wepinNetwork?.getFirebaseConfig()
             firebaseNetwork = FirebaseNetwork(key: fireconfig!)
-            StorageManager.shared.deleteAllIfAppIdDataNotExists()
             await checkLoginSession()
             
             initialized = true
@@ -159,7 +159,7 @@ public class WepinLogin {
         )
         return try await withCheckedThrowingContinuation { continuation in
             let presentationContextProvider = WepinPresentationContextProvider(window: viewController.view.window)
-            let authSession = ASWebAuthenticationSession(url: request.externalUserAgentRequestURL(),
+            self.authSession = ASWebAuthenticationSession(url: request.externalUserAgentRequestURL(),
                                                          callbackURLScheme:  "wepin.\(initParams.appId)") { callbackURL, error in
                 
                 if let callbackURL = callbackURL {
@@ -231,9 +231,9 @@ public class WepinLogin {
                 // 인증 흐름이 완료된 후 nil로 설정
                 WepinLogin.WepinAuthorizationFlow = nil
             }
-                
-            authSession.presentationContextProvider = presentationContextProvider
-            authSession.start()
+            
+            self.authSession?.presentationContextProvider = presentationContextProvider
+            self.authSession?.start()
         }
     }
     
