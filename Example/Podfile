@@ -3,12 +3,18 @@ use_frameworks!
 platform :ios, '13.0'
 
 target 'WepinLogin_Example' do
+  # pod 'WepinCommon', :path => '../../WepinCommon'
+  # pod 'WepinStorage', :path => '../../WepinStorage'
+  # pod 'WepinNetwork', :path => '../../WepinNetwork'
+  # pod 'WepinSession', :path => '../../WepinSession'
+  # pod 'WepinLogin', :path => '../'
+  pod 'WepinCommon', '~> 1.1.0'
+  pod 'WepinStorage', '~> 1.1.0'
+  pod 'WepinNetwork', '~> 1.1.0'
+  pod 'WepinSession', '~> 1.1.0'
   pod 'WepinLogin', :path => '../'
-#  pod 'secp256k1.swift'
   target 'WepinLogin_Tests' do
-    
     inherit! :search_paths
 
-#    pod 'secp256k1.swift'
   end
 end

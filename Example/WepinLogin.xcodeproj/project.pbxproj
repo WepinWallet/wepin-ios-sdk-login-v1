@@ -3,19 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03F219ABF5080258686D1C6E /* Pods_WepinLogin_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B5B1992675FBDD7972EA03 /* Pods_WepinLogin_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		610A97F9E666A8F50A089EBC /* Pods_WepinLogin_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF96CF7F6A757385750296CF /* Pods_WepinLogin_Example.framework */; };
-		9F7EC6E31BC06B6439FAC222 /* Pods_WepinLogin_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45CF9D317DC1E539EB03F741 /* Pods_WepinLogin_Tests.framework */; };
-		ECCE2E8C2C212D79009F3625 /* TestListCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCE2E8B2C212D79009F3625 /* TestListCellTableViewCell.swift */; };
+		9D2517A61DAD726655375306 /* Pods_WepinLogin_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4ABE1239D7E94ADD0250746 /* Pods_WepinLogin_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,12 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		17EB36CC14AF4FA9292BB112 /* Pods-WepinLogin_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WepinLogin_Tests.debug.xcconfig"; path = "Target Support Files/Pods-WepinLogin_Tests/Pods-WepinLogin_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		1DBCF5EBF2621FD996822B48 /* Pods-WepinLogin_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WepinLogin_Example.debug.xcconfig"; path = "Target Support Files/Pods-WepinLogin_Example/Pods-WepinLogin_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		1DF33204F1CA4AA27348BA91 /* Pods-WepinLogin_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WepinLogin_Tests.release.xcconfig"; path = "Target Support Files/Pods-WepinLogin_Tests/Pods-WepinLogin_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		25F6C760A7322204861933B5 /* Pods-WepinLogin_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WepinLogin_Example.release.xcconfig"; path = "Target Support Files/Pods-WepinLogin_Example/Pods-WepinLogin_Example.release.xcconfig"; sourceTree = "<group>"; };
-		45CF9D317DC1E539EB03F741 /* Pods_WepinLogin_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WepinLogin_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		498A63DBDEB9FB539ABF4C9F /* WepinLogin.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WepinLogin.podspec; path = ../WepinLogin.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		0FE45FC08F0DB92A79A30F77 /* WepinLogin.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WepinLogin.podspec; path = ../WepinLogin.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		3092F356EC59C4ABBA267A0D /* Pods-WepinLogin_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WepinLogin_Example.release.xcconfig"; path = "Target Support Files/Pods-WepinLogin_Example/Pods-WepinLogin_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* WepinLogin_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WepinLogin_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,10 +40,13 @@
 		607FACE51AFB9204008FA782 /* WepinLogin_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WepinLogin_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		8CDE4074365B95DE829D1689 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		9BBFBC3C96EE3D12DED0E3ED /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		CF96CF7F6A757385750296CF /* Pods_WepinLogin_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WepinLogin_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ECCE2E8B2C212D79009F3625 /* TestListCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestListCellTableViewCell.swift; sourceTree = "<group>"; };
+		6C4013B5847773DFD9018EF6 /* Pods-WepinLogin_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WepinLogin_Example.debug.xcconfig"; path = "Target Support Files/Pods-WepinLogin_Example/Pods-WepinLogin_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		AB3B402526807B2BFF81D3F2 /* Pods-WepinLogin_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WepinLogin_Tests.release.xcconfig"; path = "Target Support Files/Pods-WepinLogin_Tests/Pods-WepinLogin_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		B07B0FE7F3E76D982A53AE30 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		C4ABE1239D7E94ADD0250746 /* Pods_WepinLogin_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WepinLogin_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E69214FBD92927850879EE6D /* Pods-WepinLogin_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WepinLogin_Tests.debug.xcconfig"; path = "Target Support Files/Pods-WepinLogin_Tests/Pods-WepinLogin_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		E94373EC3F355B4C77EC5399 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		F2B5B1992675FBDD7972EA03 /* Pods_WepinLogin_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WepinLogin_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				610A97F9E666A8F50A089EBC /* Pods_WepinLogin_Example.framework in Frameworks */,
+				03F219ABF5080258686D1C6E /* Pods_WepinLogin_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,18 +62,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F7EC6E31BC06B6439FAC222 /* Pods_WepinLogin_Tests.framework in Frameworks */,
+				9D2517A61DAD726655375306 /* Pods_WepinLogin_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		20352ECE28C8A9997BCCDD69 /* Frameworks */ = {
+		063F45D699510EC2920EE3DF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CF96CF7F6A757385750296CF /* Pods_WepinLogin_Example.framework */,
-				45CF9D317DC1E539EB03F741 /* Pods_WepinLogin_Tests.framework */,
+				6C4013B5847773DFD9018EF6 /* Pods-WepinLogin_Example.debug.xcconfig */,
+				3092F356EC59C4ABBA267A0D /* Pods-WepinLogin_Example.release.xcconfig */,
+				E69214FBD92927850879EE6D /* Pods-WepinLogin_Tests.debug.xcconfig */,
+				AB3B402526807B2BFF81D3F2 /* Pods-WepinLogin_Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5703F6E83001485E35AFE472 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F2B5B1992675FBDD7972EA03 /* Pods_WepinLogin_Example.framework */,
+				C4ABE1239D7E94ADD0250746 /* Pods_WepinLogin_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -87,8 +96,8 @@
 				607FACD21AFB9204008FA782 /* Example for WepinLogin */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
-				65A8642C8821C241701DCC92 /* Pods */,
-				20352ECE28C8A9997BCCDD69 /* Frameworks */,
+				063F45D699510EC2920EE3DF /* Pods */,
+				5703F6E83001485E35AFE472 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,7 +117,6 @@
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
-				ECCE2E8B2C212D79009F3625 /* TestListCellTableViewCell.swift */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
@@ -144,22 +152,11 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				498A63DBDEB9FB539ABF4C9F /* WepinLogin.podspec */,
-				9BBFBC3C96EE3D12DED0E3ED /* README.md */,
-				8CDE4074365B95DE829D1689 /* LICENSE */,
+				0FE45FC08F0DB92A79A30F77 /* WepinLogin.podspec */,
+				E94373EC3F355B4C77EC5399 /* README.md */,
+				B07B0FE7F3E76D982A53AE30 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
-			sourceTree = "<group>";
-		};
-		65A8642C8821C241701DCC92 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				1DBCF5EBF2621FD996822B48 /* Pods-WepinLogin_Example.debug.xcconfig */,
-				25F6C760A7322204861933B5 /* Pods-WepinLogin_Example.release.xcconfig */,
-				17EB36CC14AF4FA9292BB112 /* Pods-WepinLogin_Tests.debug.xcconfig */,
-				1DF33204F1CA4AA27348BA91 /* Pods-WepinLogin_Tests.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,11 +166,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "WepinLogin_Example" */;
 			buildPhases = (
-				27944759A718B6ED567E4243 /* [CP] Check Pods Manifest.lock */,
+				116D66872B5CC6E466E46E05 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				1AF4BD977647C9E994F75411 /* [CP] Embed Pods Frameworks */,
+				754CE29FBA3C396A3C93F092 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -188,7 +185,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "WepinLogin_Tests" */;
 			buildPhases = (
-				BF01B06E3ABBE319AA497F06 /* [CP] Check Pods Manifest.lock */,
+				B665224BEEE49C36A4927A0D /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
@@ -209,18 +206,19 @@
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 1520;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = "";
+						DevelopmentTeam = B6626Z492H;
+						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = "";
+						DevelopmentTeam = B6626Z492H;
+						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -266,31 +264,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1AF4BD977647C9E994F75411 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WepinLogin_Example/Pods-WepinLogin_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AppAuth/AppAuth.framework",
-				"${BUILT_PRODUCTS_DIR}/BCrypt/BCrypt.framework",
-				"${BUILT_PRODUCTS_DIR}/WepinLogin/WepinLogin.framework",
-				"${BUILT_PRODUCTS_DIR}/secp256k1.swift/secp256k1.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppAuth.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BCrypt.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WepinLogin.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/secp256k1.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WepinLogin_Example/Pods-WepinLogin_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		27944759A718B6ED567E4243 /* [CP] Check Pods Manifest.lock */ = {
+		116D66872B5CC6E466E46E05 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -312,7 +286,37 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BF01B06E3ABBE319AA497F06 /* [CP] Check Pods Manifest.lock */ = {
+		754CE29FBA3C396A3C93F092 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WepinLogin_Example/Pods-WepinLogin_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AppAuth/AppAuth.framework",
+				"${BUILT_PRODUCTS_DIR}/BCrypt/BCrypt.framework",
+				"${BUILT_PRODUCTS_DIR}/WepinCommon/WepinCommon.framework",
+				"${BUILT_PRODUCTS_DIR}/WepinLogin/WepinLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/WepinNetwork/WepinNetwork.framework",
+				"${BUILT_PRODUCTS_DIR}/WepinSession/WepinSession.framework",
+				"${BUILT_PRODUCTS_DIR}/WepinStorage/WepinStorage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppAuth.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BCrypt.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WepinCommon.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WepinLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WepinNetwork.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WepinSession.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WepinStorage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WepinLogin_Example/Pods-WepinLogin_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B665224BEEE49C36A4927A0D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -341,7 +345,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECCE2E8C2C212D79009F3625 /* TestListCellTableViewCell.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
@@ -389,7 +392,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -398,17 +400,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -419,7 +418,6 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -447,7 +445,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -456,17 +453,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -477,7 +471,6 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -489,68 +482,47 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1DBCF5EBF2621FD996822B48 /* Pods-WepinLogin_Example.debug.xcconfig */;
+			baseConfigurationReference = 6C4013B5847773DFD9018EF6 /* Pods-WepinLogin_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B6626Z492H;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = WepinLogin/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = io.wepin.demo.login;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wepin.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 25F6C760A7322204861933B5 /* Pods-WepinLogin_Example.release.xcconfig */;
+			baseConfigurationReference = 3092F356EC59C4ABBA267A0D /* Pods-WepinLogin_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B6626Z492H;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = WepinLogin/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = io.wepin.demo.login;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wepin.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 17EB36CC14AF4FA9292BB112 /* Pods-WepinLogin_Tests.debug.xcconfig */;
+			baseConfigurationReference = E69214FBD92927850879EE6D /* Pods-WepinLogin_Tests.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B6626Z492H;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
@@ -561,44 +533,30 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WepinLogin_Example.app/WepinLogin_Example";
 			};
 			name = Debug;
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1DF33204F1CA4AA27348BA91 /* Pods-WepinLogin_Tests.release.xcconfig */;
+			baseConfigurationReference = AB3B402526807B2BFF81D3F2 /* Pods-WepinLogin_Tests.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B6626Z492H;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WepinLogin_Example.app/WepinLogin_Example";
 			};
 			name = Release;

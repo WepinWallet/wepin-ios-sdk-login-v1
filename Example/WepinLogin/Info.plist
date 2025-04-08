@@ -27,7 +27,7 @@
 			<string>wepin login</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>wepin.appid</string>
+				<string>wepin.appId</string>
 			</array>
 		</dict>
 	</array>

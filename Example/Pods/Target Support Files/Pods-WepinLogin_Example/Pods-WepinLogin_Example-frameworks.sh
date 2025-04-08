@@ -178,14 +178,20 @@ code_sign_if_enabled() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/AppAuth/AppAuth.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/BCrypt/BCrypt.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/WepinCommon/WepinCommon.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/WepinLogin/WepinLogin.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/secp256k1.swift/secp256k1.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/WepinNetwork/WepinNetwork.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/WepinSession/WepinSession.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/WepinStorage/WepinStorage.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/AppAuth/AppAuth.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/BCrypt/BCrypt.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/WepinCommon/WepinCommon.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/WepinLogin/WepinLogin.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/secp256k1.swift/secp256k1.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/WepinNetwork/WepinNetwork.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/WepinSession/WepinSession.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/WepinStorage/WepinStorage.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

@@ -28,10 +28,11 @@ After signing up for [Wepin Workspace](https://workspace.wepin.io/), go to the d
 ## ⏩ Requirements
 - iOS 13+
 - Swift 5.x
+- Xcode 16+
 
 ## ⏩ Installation
 
-> ⚠️ Important Notice for v1.0.0 Update
+> ⚠️ Important Notice for v1.1.0 Update
 >
 > 🚨 Breaking Changes & Migration Guide 🚨
 >
@@ -43,6 +44,9 @@ After signing up for [Wepin Workspace](https://workspace.wepin.io/), go to the d
 > •    Existing data will remain accessible unless a key issue is detected, in which case a reset will occur.
 > •    ⚠️ Downgrading to an older version after updating to v1.0.0 may prevent access to previously stored data.
 > •    Recommended: Backup your data before updating to avoid any potential issues.
+> 🔄 getSignForLogin deprecated
+> • Starting from v1.1.0, getSignForLogin() is no longer supported because the 'sign' parameter has been removed from the login process. 
+> • To log in without a signature, please delete the Auth Key in your Wepin Workspace (Development Tools > Login tab > Auth Key > Delete). The Auth Key menu is visible only if a key was previously generated. Refer to the latest developer guide for more information.
 
 WepinLogin is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
@@ -145,8 +149,6 @@ An in-app browser will open and proceed to log in to the OAuth provider. To retr
         let oauthParams = WepinLoginOauth2Params(provider: "discord", clientId: self.discordClientId)
         let res = try await wepin!.loginWithOauthProvider(params: oauthParams, viewController: self)
         let privateKey = "private key for wepin id/access Token"
-        // token sign 
-        let sign = wepin!.getSignForLogin(privateKey: privateKey, message: res.token)
         //call loginWithIdToken() or loginWithAccessToken()
     } catch (let error){
         self.tvResult.text = String("Faild: \(error)")
@@ -234,12 +236,11 @@ This function logs in to the Wepin Firebase using an external ID token. It retur
 #### Parameters
 - `params` \<WepinLoginOauthIdTokenRequest> 
   - `idToken` \<String> - ID token value to be used for login
-  - `sign` \<String?> - __optional__ Signature value for the token provided as the first parameter.(Returned value of [getSignForLogin()](#GetSignForLogin))
   
 > [!NOTE]
-> Starting from WepinLogin version 1.0.0, the sign value is optional.
+> Starting from WepinLogin version 1.1.0, the sign value is removed.
 >
-> If you choose to remove the authentication key issued from the [Wepin Workspace](https://workspace.wepin.io/), you may opt not to use the `sign` value. 
+> Please remove the authentication key issued from the [Wepin Workspace](https://workspace.wepin.io/). 
 >
 > (Wepin Workspace > Development Tools menu > Login tab > Auth Key > Delete)
 > > The Auth Key menu is visible only if an authentication key was previously generated.
@@ -258,8 +259,7 @@ This function logs in to the Wepin Firebase using an external ID token. It retur
 ```swift
     do {
         let token = "ID-TOKEN"
-        let sign = wepin!.getSignForLogin(privateKey: privateKey, message: token)
-        let params = WepinLoginOauthIdTokenRequest(idToken: token, sign: sign!)
+        let params = WepinLoginOauthIdTokenRequest(idToken: token)
         wepinLoginRes = try await wepin!.loginWithIdToken(params: params)
         
         self.tvResult.text = String("Successed: \(wepinLoginRes)")
@@ -278,13 +278,12 @@ This function logs in to the Wepin Firebase using an external access token. It r
 #### Parameters
 - `params` \<WepinLoginOauthAccessTokenRequest> 
   - `provider` \<"naver"|"discord"> - Provider that issued the access token
-  - `accessToken` \<String> - Access token value to be used for login 
-  - `sign` \<String?> - __optional__ Signature value for the token provided as the first parameter. (Returned value of [getSignForLogin()](#GetSignForLogin))
+  - `accessToken` \<String> - Access token value to be used for login
 
 > [!NOTE]
-> Starting from WepinLogin version 1.0.0, the sign value is optional.
+> Starting from WepinLogin version 1.1.0, the sign value is removed.
 >
-> If you choose to remove the authentication key issued from the [Wepin Workspace](https://workspace.wepin.io/), you may opt not to use the `sign` value. 
+> Please remove the authentication key issued from the [Wepin Workspace](https://workspace.wepin.io/). 
 >
 > (Wepin Workspace > Development Tools menu > Login tab > Auth Key > Delete)
 > > The Auth Key menu is visible only if an authentication key was previously generated.
@@ -304,8 +303,7 @@ This function logs in to the Wepin Firebase using an external access token. It r
 ```swift
     do {
         let token = "ACCESS-TOKEN"
-        let sign = wepin!.getSignForLogin(privateKey: privateKey, message: token)
-        let params = WepinLoginOauthAccessTokenRequest(provider: "discord", accessToken: token, sign: sign!)
+        let params = WepinLoginOauthAccessTokenRequest(provider: "discord", accessToken: token)
         wepinLoginRes = try await wepin!.loginWithAccessToken(params: params)
         self.tvResult.text = String("Successed: \(wepinLoginRes)")
     } catch (let error){
@@ -457,30 +455,8 @@ The `logoutWepin()` method logs out the user logged into Wepin.
 ```
 
 ### getSignForLogin
-Generates signatures to verify the issuer. It is mainly used to generate signatures for login-related information such as ID tokens and access tokens.
-
-```swift
-wepin!.getSignForLogin(privateKey: privateKey, message: "")
-```
-
-#### Parameters
-- `privKey` \<String> - The authentication key used for signature generation.
-- `message` \<String> - The message or payload to be signed.
-
-#### Returns
-- String - The generated signature.
-
-> ‼️ Caution ‼️
-> 
-> The authentication key (`privKey`) must be stored securely and must not be exposed to the outside. It is recommended to execute the `getSignForLogin()` method on the backend rather than the frontend for enhanced security and protection of sensitive information.
-
-#### Example
-- java
-  ```swift
-  let privKey = '0400112233445566778899001122334455667788990011223344556677889900'
-  let idToken = 'idtokenabcdef'
-  let sign = wepin!.getSignForLogin(privateKey: privKey, message: idToken)
-  ```
+> [!NOTE]
+> Starting from WepinLogin version 1.1.0, getSignForLogin method no longer supported.
 
 ### finalize
 ```swift

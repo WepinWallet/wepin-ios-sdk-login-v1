@@ -29,12 +29,27 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>WepinCommon.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>WepinLogin.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>secp256k1.swift.xcscheme</key>
+		<key>WepinNetwork.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>WepinSession.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>WepinStorage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
