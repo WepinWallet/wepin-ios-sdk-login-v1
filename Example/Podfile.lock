@@ -24,7 +24,7 @@ PODS:
 
 DEPENDENCIES:
   - WepinCommon (~> 1.1.0)
-  - WepinLogin (from `../`)
+  - WepinLogin (~> 1.1.0)
   - WepinNetwork (~> 1.1.0)
   - WepinSession (~> 1.1.0)
   - WepinStorage (~> 1.1.0)
@@ -34,13 +34,10 @@ SPEC REPOS:
     - AppAuth
     - BCrypt
     - WepinCommon
+    - WepinLogin
     - WepinNetwork
     - WepinSession
     - WepinStorage
-
-EXTERNAL SOURCES:
-  WepinLogin:
-    :path: "../"
 
 SPEC CHECKSUMS:
   AppAuth: d4f13a8fe0baf391b2108511793e4b479691fb73
@@ -51,6 +48,6 @@ SPEC CHECKSUMS:
   WepinSession: 2b11a679d2c1a8c564d9a14a7b00f4788d478007
   WepinStorage: 9c01d74c7cfe3ab8a6a0541d5d73db87fd7b8883
 
-PODFILE CHECKSUM: e3842f4ad28a2fec7184f1bca82a7ea9dca0aa7b
+PODFILE CHECKSUM: a50115f2c7eb961b5cb0f0dd03bc029d2580285b
 
 COCOAPODS: 1.15.2
