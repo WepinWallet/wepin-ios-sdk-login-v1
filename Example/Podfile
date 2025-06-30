@@ -4,15 +4,12 @@ platform :ios, '13.0'
 
 target 'WepinLogin_Example' do
   # pod 'WepinCommon', :path => '../../WepinCommon'
-  # pod 'WepinStorage', :path => '../../WepinStorage'
-  # pod 'WepinNetwork', :path => '../../WepinNetwork'
-  # pod 'WepinSession', :path => '../../WepinSession'
+  # pod 'WepinCore', :path => '../../WepinCore'
   # pod 'WepinLogin', :path => '../'
-  pod 'WepinCommon', '~> 1.1.0'
-  pod 'WepinStorage', '~> 1.1.0'
-  pod 'WepinNetwork', '~> 1.1.0'
-  pod 'WepinSession', '~> 1.1.0'
-  pod 'WepinLogin', :'~> 1.1.0'
+  pod 'WepinCommon', '~> 1.1.2'
+  pod 'WepinCore', '~> 1.1.2'
+  pod 'WepinLogin','~> 1.1.2'
+#   pod 'WepinLogin', :'~> 1.1.0'
   target 'WepinLogin_Tests' do
     inherit! :search_paths
 
