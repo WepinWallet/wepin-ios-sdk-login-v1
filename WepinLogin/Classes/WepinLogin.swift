@@ -5,9 +5,7 @@ import SafariServices
 import AppAuth
 import AuthenticationServices
 import WepinCommon
-import WepinStorage
-import WepinSession
-import WepinNetwork
+import WepinCore
 
 public typealias CompletionHandler = (_ result:Bool?, _ error:WepinError?) -> Void
 
@@ -15,12 +13,12 @@ public class WepinLogin {
     private var initParams: WepinLoginParams
     var initialized: Bool = false
     var providerInfo: [OAuthProviderInfo]? = nil
-    var regex: WepinRegex? = nil
+    public var regex: WepinRegex? = nil
     var sdkType: String = ""
     var version: String = ""
     var domain: String  = ""
     
-    let networkMonitor = NetworkMonitor.shared
+    var networkMonitor = NetworkMonitor.shared
     
     var safariVC: SFSafariViewController? = nil
     public static var WepinAuthorizationFlow: OIDExternalUserAgentSession?
@@ -31,7 +29,6 @@ public class WepinLogin {
         version = Bundle(for: WepinLogin.self).infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.1.0"
         domain = Bundle.main.bundleIdentifier ?? ""
         self.sdkType = "\(sdkType ?? "ios")-login"
-        WepinStorage.shared.initManager(appId: initParams.appId, sdkType: sdkType)
         
     }
     
@@ -40,21 +37,18 @@ public class WepinLogin {
             throw WepinError.alreadyInitialized
         }
         do {
-            do {
-                try WepinNetwork.shared.initialize(appKey: initParams.appKey, domain: domain, sdkType: self.sdkType, version: version)
-            } catch {
-                print("invalid wepin app key")
-            }
-            _ = try await WepinNetwork.shared.getAppInfo()
-            let fireconfig = try await WepinNetwork.shared.getFirebaseConfig()
-            WepinFirebaseNetwork.shared.initialize(firebaseKey: fireconfig)
+            try await WepinCore.shared.initialize(appId: initParams.appId, appKey: initParams.appKey, domain: domain, sdkType: sdkType, version: version)
             
-            WepinSessionManager.shared.initialize(appId: initParams.appId, sdkType: self.sdkType)
+            async let loginStatusTask = WepinCore.shared.session.checkLoginStatusAndGetLifeCycle()
+            async let providerInfoTask = WepinCore.shared.network.getOAuthProviderInfo()
+            async let regexTask = WepinCore.shared.network.getRegex()
             
-            _ = await WepinSessionManager.shared.checkLoginStatusAndGetLifeCycle()
-            providerInfo = try await WepinNetwork.shared.getOAuthProviderInfo()
-            regex = try await WepinNetwork.shared.getRegex()
-            initialized = true
+            let (_, providerInfoResult, regexResult) = try await (loginStatusTask, providerInfoTask, regexTask)
+            
+            self.providerInfo = providerInfoResult
+            self.regex = regexResult
+            self.initialized = true
+            
             return initialized
         } catch {
             throw error
@@ -66,10 +60,7 @@ public class WepinLogin {
     }
     
     public func finalize() {
-        WepinSessionManager.shared.clearSession()
-        WepinSessionManager.shared.finalize()
-        WepinFirebaseNetwork.shared.finalize()
-        WepinNetwork.shared.finalize()
+        WepinCore.shared.finalize()
         initialized = false
     }
     
@@ -87,7 +78,7 @@ public class WepinLogin {
     public func loginWithOauthProvider(params: WepinLoginOauth2Params, viewController: UIViewController) async throws -> WepinLoginOauthResult {
         try prevCheck()
         
-        WepinSessionManager.shared.clearSession()
+        WepinCore.shared.session.clearSession()
         
         guard let provider = providerInfo?.first(where: {$0.isSupportProvider(provider: params.provider)}) else {
             throw WepinError.invalidLoginProvider
@@ -164,7 +155,7 @@ public class WepinLogin {
                                 codeVerifier: request.codeVerifier
                             )
                             
-                            let res = try await WepinNetwork.shared.oauthTokenRequest(provider: params.provider, request: requestParams)
+                            let res = try await WepinCore.shared.network.oauthTokenRequest(provider: params.provider, request: requestParams)
                             
                             let tokenType: WepinOauthTokenType = provider.oauthSpec.contains("oidc") ? WepinOauthTokenType.idToken : WepinOauthTokenType.accessToken
                             let tokenValue = tokenType == .idToken ? res.id_token ?? "" : res.access_token
@@ -189,7 +180,7 @@ public class WepinLogin {
     public func signUpWithEmailAndPassword(params: WepinLoginWithEmailParams) async throws -> WepinLoginResult {
         try prevCheck()
         
-        if (!WepinNetwork.shared.isInitialized() || !WepinFirebaseNetwork.shared.isInitialize()) {
+        if (!WepinCore.shared.network.isInitialized() || !WepinCore.shared.firebaseNetwork.isInitialize()) {
             throw WepinError.networkNotInitialized
         }
         
@@ -201,17 +192,17 @@ public class WepinLogin {
             throw WepinError.incorrectPasswordForm
         }
         
-        WepinSessionManager.shared.clearSession()
+        WepinCore.shared.session.clearSession()
         
         do {
-            let checkEmailResponse = try await WepinNetwork.shared.checkEmailExist(email: params.email)
+            let checkEmailResponse = try await WepinCore.shared.network.checkEmailExist(email: params.email)
             if (checkEmailResponse.isEmailExist == true && checkEmailResponse.isEmailVerified == true && ((checkEmailResponse.providerIds.contains("password")) != nil)) {
                 throw WepinError.existedEmail
             } else {
-                let verifyResponse = try await WepinNetwork.shared.verify(request: VerifyRequest(type: "create", email: params.email, localeId: params.locale == "ko" ? 1 : 2))
+                let verifyResponse = try await WepinCore.shared.network.verify(request: VerifyRequest(type: "create", email: params.email, localeId: params.locale == "ko" ? 1 : 2))
 //                if verifyResponse.result != nil {
                     if verifyResponse.oobReset != nil && verifyResponse.oobVerify != nil {
-                        let resetPWres = try await WepinFirebaseNetwork.shared.resetPassword(ResetPasswordRequest(oobCode: verifyResponse.oobReset!, newPassword: params.password))
+                        let resetPWres = try await WepinCore.shared.firebaseNetwork.resetPassword(ResetPasswordRequest(oobCode: verifyResponse.oobReset!, newPassword: params.password))
                         if resetPWres == nil || resetPWres.email.lowercased() != params.email.lowercased() {
                             throw WepinError.failedEmailVerification
                         }
@@ -235,12 +226,12 @@ public class WepinLogin {
         if !regex!.validatePassword(params.password) {
             throw WepinError.incorrectPasswordForm
         }
-        if (!WepinNetwork.shared.isInitialized() || !WepinFirebaseNetwork.shared.isInitialize()) {
+        if (!WepinCore.shared.network.isInitialized() || !WepinCore.shared.firebaseNetwork.isInitialize()) {
             throw WepinError.networkNotInitialized
         }
         
         do {
-            let checkEmailResponse = try await WepinNetwork.shared.checkEmailExist(email: params.email)
+            let checkEmailResponse = try await WepinCore.shared.network.checkEmailExist(email: params.email)
             if (checkEmailResponse.isEmailExist == true && checkEmailResponse.isEmailVerified == true && ((checkEmailResponse.providerIds.contains("password")) != nil)) {
                 return try await loginWithEmailAndResetPasswordState(params: params)
             } else {
@@ -252,10 +243,10 @@ public class WepinLogin {
     }
     
     private func loginWithEmailAndResetPasswordState(params: WepinLoginWithEmailParams) async throws -> WepinLoginResult {
-        WepinSessionManager.shared.clearSession()
+        WepinCore.shared.session.clearSession()
         var isChangedRequired = false
         do {
-            let res = try await WepinNetwork.shared.getUserPasswordState(email: params.email)
+            let res = try await WepinCore.shared.network.getUserPasswordState(email: params.email)
             isChangedRequired = res.isPasswordResetRequired
         } catch {
             switch error {
@@ -277,29 +268,29 @@ public class WepinLogin {
         do {
             let encryptPW = hashPassword(params.password)
             let firstPW = isChangedRequired ? params.password : encryptPW
-            let signInRes = try await WepinFirebaseNetwork.shared.signInWithEmailPassword(EmailAndPasswordRequest(email: params.email, password: firstPW))
+            let signInRes = try await WepinCore.shared.firebaseNetwork.signInWithEmailPassword(EmailAndPasswordRequest(email: params.email, password: firstPW))
             if signInRes.idToken == nil || signInRes.refreshToken == nil {
                 throw WepinError.loginFailed
             }
             if (isChangedRequired) {
-                let loginRes = try await WepinNetwork.shared.login(request: LoginRequest(idToken: signInRes.idToken))
+                let loginRes = try await WepinCore.shared.network.login(request: LoginRequest(idToken: signInRes.idToken))
                 if loginRes.userInfo.userId == nil {
                     throw WepinError.loginFailed
                 }
-                WepinNetwork.shared.setAuthToken(access: loginRes.token.access, refresh: loginRes.token.refresh)
-                let updatePwRes = try await WepinFirebaseNetwork.shared.updatePassword(idToken: signInRes.idToken, password: encryptPW)
+                WepinCore.shared.network.setAuthToken(access: loginRes.token.access, refresh: loginRes.token.refresh)
+                let updatePwRes = try await WepinCore.shared.firebaseNetwork.updatePassword(idToken: signInRes.idToken, password: encryptPW)
                 if updatePwRes == nil || updatePwRes.idToken == nil || updatePwRes.refreshToken == nil {
                     throw WepinError.failedPasswordSetting
                 }
                 
-                let updatePWStateRes = try await WepinNetwork.shared.updateUserPasswordState(userId: loginRes.userInfo.userId, request: PasswordStateRequest(isPasswordResetRequired: false))
+                let updatePWStateRes = try await WepinCore.shared.network.updateUserPasswordState(userId: loginRes.userInfo.userId, request: PasswordStateRequest(isPasswordResetRequired: false))
                 if updatePWStateRes.isPasswordResetRequired != false {
                     throw WepinError.failedPasswordSetting
                 }
-                WepinNetwork.shared.clearAuthToken()
+                WepinCore.shared.network.clearAuthToken()
                 
                 let wepinToken = StorageDataType.FirebaseWepin(idToken: updatePwRes.idToken, refreshToken: updatePwRes.refreshToken, provider: WepinLoginProviders.email.rawValue)
-                WepinStorage.shared.setStorage(key: "firebase:wepin", data: wepinToken)
+                WepinCore.shared.storage.setStorage(key: "firebase:wepin", data: wepinToken)
                 return WepinLoginResult(provider: WepinLoginProviders.email, token: WepinFBToken(idToken: updatePwRes.idToken, refreshToken: updatePwRes.refreshToken))
             } else {
                 return WepinLoginResult(provider: WepinLoginProviders.email, token: WepinFBToken(idToken: signInRes.idToken, refreshToken: signInRes.refreshToken))
@@ -312,26 +303,29 @@ public class WepinLogin {
     public func loginWithIdToken(params: WepinLoginOauthIdTokenRequest) async throws -> WepinLoginResult {
         try prevCheck()
         
-        if (!WepinNetwork.shared.isInitialized() || !WepinFirebaseNetwork.shared.isInitialize()) {
+        if (!WepinCore.shared.network.isInitialized() || !WepinCore.shared.firebaseNetwork.isInitialize()) {
             throw WepinError.networkNotInitialized
         }
         
-        WepinSessionManager.shared.clearSession()
+        WepinCore.shared.session.clearSession()
         
         do {
-            let res = try await WepinNetwork.shared.loginOAuthIdToken(request: params)
+            let res = try await WepinCore.shared.network.loginOAuthIdToken(request: params)
             if res.token == nil {
                 throw WepinError.invalidToken
             }
-            let fbRes = try await WepinFirebaseNetwork.shared.signInWithCustomToken((res.token)!)
+            let fbRes = try await WepinCore.shared.firebaseNetwork.signInWithCustomToken((res.token)!)
             if fbRes == nil || fbRes.idToken == nil || (fbRes.refreshToken) == nil {
                 throw WepinError.loginFailed
             }
             let fbToken = WepinFBToken(idToken: (fbRes.idToken), refreshToken: (fbRes.refreshToken))
             let wepinToken = StorageDataType.FirebaseWepin(idToken: (fbRes.idToken), refreshToken: (fbRes.refreshToken), provider: WepinLoginProviders.externalToken.rawValue)
-            WepinStorage.shared.setStorage(key: "firebase:wepin", data: wepinToken)
+            WepinCore.shared.storage.setStorage(key: "firebase:wepin", data: wepinToken)
             return WepinLoginResult(provider: WepinLoginProviders.externalToken, token: fbToken)
         } catch let wepinError {
+            if wepinError.localizedDescription.contains("no_email") {
+                throw WepinError.requiredSignupEmail
+            }
             throw wepinError
         }
     }
@@ -347,18 +341,18 @@ public class WepinLogin {
             throw WepinError.invalidLoginProvider
         }
         
-        if (!WepinNetwork.shared.isInitialized() || !WepinFirebaseNetwork.shared.isInitialize()) {
+        if (!WepinCore.shared.network.isInitialized() || !WepinCore.shared.firebaseNetwork.isInitialize()) {
             throw WepinError.networkNotInitialized
         }
     
-        WepinSessionManager.shared.clearSession()
+        WepinCore.shared.session.clearSession()
     
         do {
-            let res = try await WepinNetwork.shared.loginOAuthAccessToken(request: params)
+            let res = try await WepinCore.shared.network.loginOAuthAccessToken(request: params)
             if res.token == nil {
                 throw WepinError.invalidToken
             }
-            let fbRes = try await WepinFirebaseNetwork.shared.signInWithCustomToken((res.token)!)
+            let fbRes = try await WepinCore.shared.firebaseNetwork.signInWithCustomToken((res.token)!)
             if fbRes == nil || fbRes.idToken == nil || fbRes.refreshToken == nil {
                 throw WepinError.loginFailed
             }
@@ -366,9 +360,12 @@ public class WepinLogin {
             let loginResult = WepinLoginResult(provider: WepinLoginProviders.externalToken, token: fbToken)
             let wepinToken = StorageDataType.FirebaseWepin(idToken: (fbRes.idToken), refreshToken: (fbRes.refreshToken), provider: WepinLoginProviders.externalToken.rawValue)
             
-            WepinStorage.shared.setStorage(key: "firebase:wepin", data: wepinToken)
+            WepinCore.shared.storage.setStorage(key: "firebase:wepin", data: wepinToken)
             return loginResult
         } catch let wepinError {
+            if wepinError.localizedDescription.contains("no_email") {
+                throw WepinError.requiredSignupEmail
+            }
             throw wepinError
         }
     }
@@ -376,21 +373,21 @@ public class WepinLogin {
     public func getRefreshFirebaseToken(prevFBToken: WepinLoginResult? = nil) async throws -> WepinLoginResult {
         try prevCheck()
         
-        if (!WepinNetwork.shared.isInitialized() || !WepinFirebaseNetwork.shared.isInitialize()) {
+        if (!WepinCore.shared.network.isInitialized() || !WepinCore.shared.firebaseNetwork.isInitialize()) {
             throw WepinError.networkNotInitialized
         }
         
         do {
             if (prevFBToken != nil) {
-                var response = try await WepinFirebaseNetwork.shared.getRefreshIdToken(GetRefreshIdTokenRequest(
+                var response = try await WepinCore.shared.firebaseNetwork.getRefreshIdToken(GetRefreshIdTokenRequest(
                     refreshToken: prevFBToken!.token.refreshToken
                 ))
                 return WepinLoginResult(provider: prevFBToken!.provider, token: WepinFBToken(idToken: response.idToken, refreshToken: response.refreshToken))
             }
             
-            let sessionExist = await WepinSessionManager.shared.checkExistFirebaseLoginSession()
+            let sessionExist = await WepinCore.shared.session.checkExistFirebaseLoginSession()
             if (sessionExist) {
-                let token = WepinStorage.shared.getStorage(key: "firebase:wepin") as? StorageDataType.FirebaseWepin
+                let token = WepinCore.shared.storage.getStorage(key: "firebase:wepin", type: StorageDataType.FirebaseWepin.self)
                 
                 if (token == nil) {
                     throw WepinError.invalidLoginSessionSimple
@@ -412,7 +409,7 @@ public class WepinLogin {
         }
         
         do {
-            let res = try await WepinNetwork.shared.login(request: LoginRequest(idToken: params.token.idToken))
+            let res = try await WepinCore.shared.network.login(request: LoginRequest(idToken: params.token.idToken))
             if (res.userInfo == nil) {
                 throw WepinError.loginFailed
             }
@@ -426,7 +423,7 @@ public class WepinLogin {
     public func getCurrentWepinUser() async throws -> WepinUser {
         try prevCheck()
         do {
-            _ = await WepinSessionManager.shared.checkLoginStatusAndGetLifeCycle()
+            _ = await WepinCore.shared.session.checkLoginStatusAndGetLifeCycle()
             let data = getWepinUser()
             if data != nil {
                 return data!
@@ -439,17 +436,17 @@ public class WepinLogin {
     
     public func logoutWepin() async throws -> Bool {
         try prevCheck()
-        let userId = WepinStorage.shared.getStorage(key: "user_id")
+        let userId = WepinCore.shared.storage.getStorage(key: "user_id")
         
         if userId == nil {
             throw WepinError.loginFailed
         }
         do {
-            let res = try await WepinNetwork.shared.logout(userId: userId as! String)
+            let res = try await WepinCore.shared.network.logout(userId: userId as! String)
             if (!res) {
                 throw WepinError.loginFailed
             }
-            WepinSessionManager.shared.clearSession()
+            WepinCore.shared.session.clearSession()
             return true
         } catch {
             throw error

@@ -1,5 +1,5 @@
 import WepinCommon
-import WepinNetwork
+import WepinCore
 
 struct WepinLoginRequest: Codable {
     let idToken: String
@@ -63,11 +63,33 @@ public struct WepinLoginParams: Codable {
     public var appKey: String
     public var baseUrl: String
     
+    // 기본 초기화 메서드 - 사용자 친화적
     public init(appId: String, appKey: String) {
         self.appId = appId
         self.appKey = appKey
-
-        self.baseUrl = try! WepinCommon.getWepinSdkUrl(appKey: appKey)["sdkBackend"] ?? ""
+        
+        // 기본값 설정
+        let defaultBaseUrl = ""
+        
+        do {
+            let urlData = try WepinCommon.getWepinSdkUrl(appKey: appKey)
+            if let backendUrl = urlData["sdkBackend"], !backendUrl.isEmpty {
+                self.baseUrl = backendUrl
+            } else {
+                self.baseUrl = defaultBaseUrl
+                print("Warning: SDK Backend URL not found, using default URL")
+            }
+        } catch {
+            self.baseUrl = defaultBaseUrl
+            print("Warning: Error getting SDK URL: \(error.localizedDescription). Using default URL.")
+        }
+    }
+    
+    // 커스텀 URL을 직접 제공하는 초기화 메서드
+    public init(appId: String, appKey: String, customBaseUrl: String) {
+        self.appId = appId
+        self.appKey = appKey
+        self.baseUrl = customBaseUrl
     }
 }
 
@@ -113,13 +135,23 @@ public enum WepinOauthTokenType: String {
 }
 
 public struct WepinFBToken {
-    let idToken: String
-    let refreshToken: String
+    public let idToken: String
+    public let refreshToken: String
+    
+    public init(idToken: String, refreshToken: String) {
+        self.idToken = idToken
+        self.refreshToken = refreshToken
+    }
 }
 
 public struct WepinLoginResult {
     public let provider: WepinLoginProviders
     public let token: WepinFBToken
+    
+    public init(provider: WepinLoginProviders, token: WepinFBToken) {
+        self.provider = provider
+        self.token = token
+    }
 }
 
 public struct LoginProviderInfo {

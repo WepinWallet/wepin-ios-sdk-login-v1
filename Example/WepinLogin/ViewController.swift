@@ -13,17 +13,16 @@ class ViewController: UIViewController {
     
     var wepinLogin: WepinLogin?
     
-    var appId: String = "WEPIN_APP_ID"
-    var appKey: String = "WEPIN_APP_KEY"
+    var appId: String = "a840783376386107736eed117085db29"
+    var appKey: String = "ak_dev_MuIgndihqglPDGHiRT4wd6G4MwZfvJeOLJn7wd36SQP"
     
     let providerInfos: [String: WepinLoginOauth2Params] = [
-        "google": WepinLoginOauth2Params(provider: "google", clientId: "GOOGLE_CLIENT_ID"),
-        "apple": WepinLoginOauth2Params(provider: "apple", clientId: "APPLE_CLIENT_ID"),
-        "discord": WepinLoginOauth2Params(provider: "discord", clientId: "DISCORD_CLIENT_ID"),
-        "naver": WepinLoginOauth2Params(provider: "naver", clientId: "NAVER_CLIENT_ID"),
-        "facebook": WepinLoginOauth2Params(provider: "facebook", clientId: "FACEBOOK_CLIENT_ID"),
-        "line": WepinLoginOauth2Params(provider: "line", clientId: "LINE_CLIENT_ID"),
-        "kakao": WepinLoginOauth2Params(provider: "kakao", clientId: "KAKAO_CLIENT_ID")
+        "google": WepinLoginOauth2Params(provider: "google", clientId: "914682313325-c9kqcpmh0vflkqflsgh6cp35b4ife95q.apps.googleusercontent.com"),
+        "apple": WepinLoginOauth2Params(provider: "apple", clientId: "appauth.wepin"),
+        "discord": WepinLoginOauth2Params(provider: "discord", clientId: "1244924865098551296"),
+        "naver": WepinLoginOauth2Params(provider: "naver", clientId: "TzwZUy3ZtAK5mxOsik9P"),
+        "facebook": WepinLoginOauth2Params(provider: "facebook", clientId: "1214719865834545"),
+        "line": WepinLoginOauth2Params(provider: "line", clientId: "2006421675")
     ]
     
     var scrollView: UIScrollView!
@@ -126,9 +125,6 @@ class ViewController: UIViewController {
             buttonStackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor, constant: -32)
         ])
         
-        
-        
-
         settingsContainerView = UIView()
         settingsContainerView.backgroundColor = .white
         settingsContainerView.layer.cornerRadius = 8
@@ -204,6 +200,7 @@ class ViewController: UIViewController {
         addFunctionButton(title: "loginWithOauthProvider(line)", action: #selector(loginWithLineTapped))
         addFunctionButton(title: "loginWithOauthProvider(kakao)", action: #selector(loginWithKakaoTapped))
         addFunctionButton(title: "loginWithAccessToken(invalid provider)", action: #selector(invalidLoginWithAccessTokenTapped))
+        addFunctionButton(title: "Get Refresh Firebase Token", action: #selector(getRefreshFirebaseTokenTapped))
         addFunctionButton(title: "Get Current Wepin User", action: #selector(getCurrentWepinUserTapped))
         addFunctionButton(title: "Get Sign For Login (Deprecated)", action: #selector(getSignForLoginTapped))
         addFunctionButton(title: "Logout", action: #selector(logoutTapped))
@@ -358,6 +355,22 @@ class ViewController: UIViewController {
     @objc func loginWithKakaoTapped() {
         Task {
             await loginWithOauthProvider(provider: "kakao")
+        }
+    }
+    
+    @objc func getRefreshFirebaseTokenTapped() {
+        guard let login = wepinLogin else {
+            updateStatus("wepinLogin is nil")
+            return
+        }
+        
+        Task {
+            do {
+                let result = try await login.getRefreshFirebaseToken()
+                updateStatus("getRefreshFirebaseToken: \(result)")
+            } catch {
+                updateStatus("Error: \(error.localizedDescription)")
+            }
         }
     }
     
