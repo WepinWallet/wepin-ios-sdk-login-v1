@@ -8,7 +8,7 @@ target 'WepinLogin_Example' do
   # pod 'WepinLogin', :path => '../'
   pod 'WepinCommon', '~> 1.1.2'
   pod 'WepinCore', '~> 1.1.2'
-  pod 'WepinLogin','~> 1.1.2'
+  pod 'WepinLogin','~> 1.2.0'
 #   pod 'WepinLogin', :'~> 1.1.0'
   target 'WepinLogin_Tests' do
     inherit! :search_paths

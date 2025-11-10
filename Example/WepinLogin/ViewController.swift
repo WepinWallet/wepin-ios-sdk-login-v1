@@ -13,16 +13,16 @@ class ViewController: UIViewController {
     
     var wepinLogin: WepinLogin?
     
-    var appId: String = "a840783376386107736eed117085db29"
-    var appKey: String = "ak_dev_MuIgndihqglPDGHiRT4wd6G4MwZfvJeOLJn7wd36SQP"
+    var appId: String = "WEPIN_APP_ID"
+    var appKey: String = "WEPIN_APP_KEY"
     
-    let providerInfos: [String: WepinLoginOauth2Params] = [
-        "google": WepinLoginOauth2Params(provider: "google", clientId: "914682313325-c9kqcpmh0vflkqflsgh6cp35b4ife95q.apps.googleusercontent.com"),
-        "apple": WepinLoginOauth2Params(provider: "apple", clientId: "appauth.wepin"),
-        "discord": WepinLoginOauth2Params(provider: "discord", clientId: "1244924865098551296"),
-        "naver": WepinLoginOauth2Params(provider: "naver", clientId: "TzwZUy3ZtAK5mxOsik9P"),
-        "facebook": WepinLoginOauth2Params(provider: "facebook", clientId: "1214719865834545"),
-        "line": WepinLoginOauth2Params(provider: "line", clientId: "2006421675")
+    let providerInfos: [LoginProviderInfo] = [
+        LoginProviderInfo(provider: "google", clientId: "GOOGLE_CLIENT_ID"),
+        LoginProviderInfo(provider: "apple", clientId: "APPLE_CLIENT_ID"),
+        LoginProviderInfo(provider: "discord", clientId: "DISCORD_CLIENT_ID"),
+        LoginProviderInfo(provider: "naver", clientId: "NAVER_CLIENT_ID"),
+        LoginProviderInfo(provider: "facebook", clientId: "FACEBOOK_CLIENT_ID"),
+        LoginProviderInfo(provider: "line", clientId: "LINE_CLIENT_ID")
     ]
     
     var scrollView: UIScrollView!
