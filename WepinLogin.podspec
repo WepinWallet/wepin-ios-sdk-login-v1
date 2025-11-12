@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WepinLogin'
-  s.version          = '1.2.0'
+  s.version          = '1.2.1'
   s.summary          = 'A short description of WepinLogin.'
   s.swift_version    = '5.0'
 
@@ -40,8 +40,8 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
-  s.dependency 'WepinCommon', '~> 1.1.2'
-  s.dependency 'WepinCore', '~> 1.1.2'
+  s.dependency 'WepinCommon', '~> 1.2.1'
+  s.dependency 'WepinCore', '~> 1.2.1'
   s.dependency 'AppAuth', '~> 2.0.0'
   s.dependency 'BCrypt', '~> 1.0.0'
 end
